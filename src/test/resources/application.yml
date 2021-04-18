@@ -1,0 +1,6 @@
+# h2 메모리모드 실행
+# default - ddl-auto: create-drop
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
