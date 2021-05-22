@@ -1,5 +1,7 @@
 package com.bigring.zerohanjpa.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,6 +13,7 @@ import com.bigring.zerohanjpa.domain.item.Item;
 import com.bigring.zerohanjpa.repository.ItemRepository;
 import com.bigring.zerohanjpa.repository.MemberRepository;
 import com.bigring.zerohanjpa.repository.OrderRepository;
+import com.bigring.zerohanjpa.repository.OrderSearch;
 
 import lombok.RequiredArgsConstructor;
 
@@ -47,5 +50,10 @@ public class OrderService {
 
         order.cancel();
 
+    }
+
+    // 검색
+    public List<Order> findOrders(OrderSearch orderSearch) {
+        return orderRepository.findAllByCriteria(orderSearch);
     }
 }

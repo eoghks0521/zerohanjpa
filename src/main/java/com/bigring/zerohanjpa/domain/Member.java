@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotEmpty;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -21,6 +22,7 @@ public class Member {
     @GeneratedValue
     private Long id;
 
+    @NotEmpty
     private String name;
 
     @Embedded//Embeded or Embedable 둘 중 하나만 있으면 되지만 명시적으로 둘다 넣어주었다.
