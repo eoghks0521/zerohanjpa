@@ -146,3 +146,4 @@ fabric.properties
 bigringdb.mv.db
 bigringdb.trace.db
 jpashop.mv.db
+jpashop.trace.db
